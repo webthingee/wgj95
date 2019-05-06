@@ -1,5 +1,6 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Hand : MonoBehaviour
 {
@@ -15,18 +16,20 @@ public class Hand : MonoBehaviour
 
         transform.position = mousePos;
 
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+        
         if (Input.GetMouseButtonDown(0))
         {
             objInHand = GetGameObj(mousePos);
             if (objInHand?.GetComponent<PickUpItem>() == null) return;
-            
+
             if (held % 2 != 0)
             {
                 objInHand.transform.parent = objInHand.GetComponent<PickUpItem>().holder;
                 objInHand.transform.position = objInHand.GetComponent<PickUpItem>().holder.position;
-                
+
                 objInHand = null;
-                
+
                 held++;
             }
             else
@@ -35,11 +38,10 @@ public class Hand : MonoBehaviour
                 objInHand.transform.position = FindObjectOfType<Hand>().transform.position;
 
                 held++;
-                
+
                 if (held == 11) held = 1;
             }
         }
-             
     }
 
     [CanBeNull]
