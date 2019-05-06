@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-    public GameObject visibleCanvas;
+    public bool startActive;
+    private GameObject visibleCanvas;
     
     [Header("Canvas List")]
     public GameObject backgroundUICanvas;
@@ -15,6 +16,7 @@ public class MenuButtons : MonoBehaviour
     private void OnEnable()
     {
         CloseAll();
+        if (startActive) ToggleActive(titleUICanvas);
     }
 
     public void Update()

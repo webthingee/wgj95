@@ -26,17 +26,19 @@ public class GameMaster : MonoBehaviour
     private int success;
     public int successGoal = 6;
     public Transform successContainer;
+
+    private bool isNewGame;
     
     [Header("Canvas")] 
     [SerializeField] public GameObject winCanvas;
     [SerializeField] public GameObject loseCanvas;
+    [SerializeField] public GameObject newGameCanvas;
     
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else if (instance != this)
         {
@@ -66,6 +68,7 @@ public class GameMaster : MonoBehaviour
     private void Start()
     {
         NextOrder();
+        NewCondition();
     }
 
     private void ShakeActionOnOnShake(int ingNum)
@@ -164,6 +167,20 @@ public class GameMaster : MonoBehaviour
         Time.timeScale = 0.000000001f;
     }
 
+    public void NewCondition()
+    {
+        Debug.Log("New Game", gameObject);
+        newGameCanvas.SetActive(true);
+        Time.timeScale = 0.000000001f; 
+    }
+
+    public void CloseNewGameCanvas()
+    {
+        Debug.Log("Start New Game", gameObject);
+        Time.timeScale = 1f;
+        newGameCanvas.SetActive(false);
+    }
+    
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);

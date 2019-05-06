@@ -806,6 +806,16 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4117167795425330978, guid: b1124c453ea554ae4ba6f239db02bbcf,
+        type: 3}
+      propertyPath: startActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751834505408053738, guid: b1124c453ea554ae4ba6f239db02bbcf,
+        type: 3}
+      propertyPath: settingsStartActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4249010403769479545, guid: b1124c453ea554ae4ba6f239db02bbcf,
         type: 3}
       propertyPath: m_AnchorMin.y
