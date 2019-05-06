@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{d2adca6c-8426-4497-a95a-9c60865472b9}">
+		<property name="assetPath">
+			<value>MoodyHipHop_Mini_SP/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ce1e6acd-a08d-4edf-9bd3-df296ceecd8c}</destination>
+		</relationship>
+	</object>
+</objects>

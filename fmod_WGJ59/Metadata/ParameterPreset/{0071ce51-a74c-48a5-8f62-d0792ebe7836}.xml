@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{0071ce51-a74c-48a5-8f62-d0792ebe7836}">
+		<property name="name">
+			<value>pepper</value>
+		</property>
+		<relationship name="folder">
+			<destination>{899180db-4c91-4f07-8ce2-12450c06adbd}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f1b0f0d0-38a4-4abf-aa90-34a41e11eb32}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f1b0f0d0-38a4-4abf-aa90-34a41e11eb32}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

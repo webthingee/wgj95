@@ -44,9 +44,9 @@ public class GameMaster : MonoBehaviour
             Debug.Log("not the instance " + name);
             Destroy(gameObject);
         }
-
-        Time.timeScale = 1f;
         
+        Time.timeScale = 1f;
+                
         winCanvas.SetActive(false);
         loseCanvas.SetActive(false);
         
@@ -67,6 +67,12 @@ public class GameMaster : MonoBehaviour
     private void Start()
     {
         NextOrder();
+        Invoke("SetMusic", 1f);
+    }
+
+    private void SetMusic()
+    {
+        FindObjectOfType<MainMusic>().ChangeSongSelection(0.15f);
     }
 
     private void ShakeActionOnOnShake(int ingNum)
@@ -74,18 +80,22 @@ public class GameMaster : MonoBehaviour
         if (ingNum == 1)
         {
             salt.FlavorValue += shakeIncreaseValue;
+            FindObjectOfType<MainMusic>().ChangeInGameSpiceLevel("salt", salt.FlavorValue/100f);
         }
         if (ingNum == 2)
         {
             saffron.FlavorValue += shakeIncreaseValue;
+            FindObjectOfType<MainMusic>().ChangeInGameSpiceLevel("saffron", saffron.FlavorValue/100f);
         }
         if (ingNum == 3)
         {
             pepper.FlavorValue += shakeIncreaseValue;
+            FindObjectOfType<MainMusic>().ChangeInGameSpiceLevel("pepper", pepper.FlavorValue/100f);
         }
         if (ingNum == 4)
         {
             mint.FlavorValue += shakeIncreaseValue;
+            FindObjectOfType<MainMusic>().ChangeInGameSpiceLevel("mint", mint.FlavorValue/100f);
         }
     }
 

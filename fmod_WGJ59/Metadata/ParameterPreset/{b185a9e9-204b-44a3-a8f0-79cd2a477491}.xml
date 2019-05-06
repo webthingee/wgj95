@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{b185a9e9-204b-44a3-a8f0-79cd2a477491}">
+		<property name="name">
+			<value>mint</value>
+		</property>
+		<relationship name="folder">
+			<destination>{899180db-4c91-4f07-8ce2-12450c06adbd}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{53645dca-23d6-4fe8-9f2b-061beee8b608}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{53645dca-23d6-4fe8-9f2b-061beee8b608}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

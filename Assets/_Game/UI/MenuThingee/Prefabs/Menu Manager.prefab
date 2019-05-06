@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4117167795425330981}
   - component: {fileID: 4117167795425330978}
-  - component: {fileID: 4117167795425330979}
+  - component: {fileID: 2641403238995688092}
   - component: {fileID: 4751834505408053738}
   m_Layer: 0
   m_Name: Menu Manager
@@ -50,13 +50,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf9429c33c4b4e69ade78c432250d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visibleCanvas: {fileID: 0}
+  startActive: 0
   backgroundUICanvas: {fileID: 4249010404965203112}
   buttonUICanvas: {fileID: 4249010404759351516}
   titleUICanvas: {fileID: 5382995427478309074}
   instructionsUICanvas: {fileID: 4249010403385066053}
   audioUICanvas: {fileID: 4249010404157562579}
---- !u!114 &4117167795425330979
+--- !u!114 &2641403238995688092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,20 +65,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4117167795425330977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: ff2d0476310b74c3fbf7177458377d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Music/bensound-buddy
-  PlayEvent: 1
-  StopEvent: 2
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  mainMusicSelection: event:/Music/MGJ_All_Music
+  songSelectionValue: 0
 --- !u!114 &4751834505408053738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,7 +1437,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
@@ -2037,6 +2028,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4249010403842809149}
     m_Modifications:
+    - target: {fileID: 2495669295248576253, guid: bd04dff7a9645448ca20eef1d94944c6,
+        type: 3}
+      propertyPath: m_Name
+      value: Title
+      objectReference: {fileID: 0}
     - target: {fileID: 2495669295248576252, guid: bd04dff7a9645448ca20eef1d94944c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2141,11 +2137,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2495669295248576253, guid: bd04dff7a9645448ca20eef1d94944c6,
-        type: 3}
-      propertyPath: m_Name
-      value: Title
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd04dff7a9645448ca20eef1d94944c6, type: 3}
@@ -2459,16 +2450,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music Slider Title
       objectReference: {fileID: 0}
-    - target: {fileID: 5819055568234209812, guid: e21d62356bb29420bac4e9c8b29f5321,
-        type: 3}
-      propertyPath: m_text
-      value: Music Volume
-      objectReference: {fileID: 0}
-    - target: {fileID: 5819055568234209812, guid: e21d62356bb29420bac4e9c8b29f5321,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 5819055568443798385, guid: e21d62356bb29420bac4e9c8b29f5321,
         type: 3}
       propertyPath: m_Name
@@ -2483,6 +2464,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819055568234209812, guid: e21d62356bb29420bac4e9c8b29f5321,
+        type: 3}
+      propertyPath: m_text
+      value: Music Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819055568234209812, guid: e21d62356bb29420bac4e9c8b29f5321,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e21d62356bb29420bac4e9c8b29f5321, type: 3}
@@ -3275,16 +3266,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5819055568234209812, guid: e21d62356bb29420bac4e9c8b29f5321,
-        type: 3}
-      propertyPath: m_text
-      value: Music Volume
-      objectReference: {fileID: 0}
-    - target: {fileID: 5819055568234209812, guid: e21d62356bb29420bac4e9c8b29f5321,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 5819055568443798385, guid: e21d62356bb29420bac4e9c8b29f5321,
         type: 3}
       propertyPath: m_Name
@@ -3299,6 +3280,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819055568234209812, guid: e21d62356bb29420bac4e9c8b29f5321,
+        type: 3}
+      propertyPath: m_text
+      value: Music Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819055568234209812, guid: e21d62356bb29420bac4e9c8b29f5321,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e21d62356bb29420bac4e9c8b29f5321, type: 3}
@@ -3327,6 +3318,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4249010404111441640}
     m_Modifications:
+    - target: {fileID: 2495669295248576253, guid: bd04dff7a9645448ca20eef1d94944c6,
+        type: 3}
+      propertyPath: m_Name
+      value: Title
+      objectReference: {fileID: 0}
     - target: {fileID: 2495669295248576252, guid: bd04dff7a9645448ca20eef1d94944c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3431,11 +3427,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2495669295248576253, guid: bd04dff7a9645448ca20eef1d94944c6,
-        type: 3}
-      propertyPath: m_Name
-      value: Title
       objectReference: {fileID: 0}
     - target: {fileID: 2495669295202799555, guid: bd04dff7a9645448ca20eef1d94944c6,
         type: 3}
