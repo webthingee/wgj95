@@ -2,7 +2,6 @@
 
 public class PickUpItem : MonoBehaviour
 {
-    public int held = 0;
     public Transform holder;
 
     private void Start()
@@ -12,5 +11,13 @@ public class PickUpItem : MonoBehaviour
 
     void Update()
     {
+        if (FindObjectOfType<Hand>().objInHand == gameObject)
+        {
+            transform.up = Vector3.zero - transform.position;
+        }
+        else
+        {            
+            transform.up = Vector3.up;
+        }
     }
 }

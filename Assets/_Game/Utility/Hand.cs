@@ -46,7 +46,6 @@ public class Hand : MonoBehaviour
     private GameObject GetGameObj(Vector3 start)
     {
         // Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, enemyAttackRange, 1 << LayerMask.NameToLayer("Player"));
-        
         Collider2D hitCollider =Physics2D.OverlapCircle(start, 0.25f, pickupLayers);
         {
             return hitCollider?.gameObject;

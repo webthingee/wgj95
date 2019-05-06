@@ -4,18 +4,20 @@ using UnityEngine.SceneManagement;
 public class GameMaster : MonoBehaviour
 {
     public static GameMaster instance;
+
+    public bool testMode;
     
     public FlavorMeter salt;
     public Color saltColor;
     
-    public FlavorMeter sugar;
-    public Color sugarColor;
+    public FlavorMeter saffron;
+    public Color saffronColor;
     
     public FlavorMeter pepper;
     public Color pepperColor;
     
-    public FlavorMeter garlic;
-    public Color garlicColor;
+    public FlavorMeter mint;
+    public Color mintColor;
 
     private int fails;
     public int failsMax = 3;
@@ -39,9 +41,9 @@ public class GameMaster : MonoBehaviour
         loseCanvas.SetActive(false);
         
         salt.flavorBkColor = saltColor;
-        sugar.flavorBkColor = sugarColor;
+        saffron.flavorBkColor = saffronColor;
         pepper.flavorBkColor = pepperColor;
-        garlic.flavorBkColor = garlicColor;
+        mint.flavorBkColor = mintColor;
 
         fails = 0;
         success = 0;
@@ -52,6 +54,11 @@ public class GameMaster : MonoBehaviour
         ShakeAction.OnShake += ShakeActionOnOnShake;
     }
 
+    private void Start()
+    {
+        NextOrder();
+    }
+
     private void ShakeActionOnOnShake(int ingNum)
     {
         if (ingNum == 1)
@@ -60,7 +67,7 @@ public class GameMaster : MonoBehaviour
         }
         if (ingNum == 2)
         {
-            sugar.FlavorValue++;
+            saffron.FlavorValue++;
         }
         if (ingNum == 3)
         {
@@ -68,7 +75,7 @@ public class GameMaster : MonoBehaviour
         }
         if (ingNum == 4)
         {
-            garlic.FlavorValue++;
+            mint.FlavorValue++;
         }
     }
 
@@ -100,7 +107,7 @@ public class GameMaster : MonoBehaviour
         
         success++;
 
-        for (int i = 0; i < fails; i++)
+        for (int i = 0; i < success; i++)
         {
             successContainer.GetChild(i)?.gameObject.SetActive(true);
         }
@@ -118,8 +125,17 @@ public class GameMaster : MonoBehaviour
     {
         foreach (FlavorMeter flavorMeter in FindObjectsOfType<FlavorMeter>())
         {
-            flavorMeter.SetGoal(Random.Range(1,20) * 5);
+            flavorMeter.SetGoal(Random.Range(3,20) * 5 - 5);
             flavorMeter.FlavorValue = 0;
+            
+            if (testMode)
+            {
+                flavorMeter.SetGoal(50);
+                flavorMeter.FlavorValue = 50;
+            }
+
+            GetComponent<CustomerManager>().NewCustomer();            
+            GetComponent<CustomerManager>().NewCountdownTimer();            
         }
     }
 

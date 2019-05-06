@@ -17,20 +17,20 @@ public class MovingHolder : MonoBehaviour
     {
         transform.position = (Vector2)transform.position + randDir * moveSpeed * Time.deltaTime;
 
-        if (transform.position.x > 9f || transform.position.x < -9f)
+        if (transform.position.x > 8f || transform.position.x < -7f)
         {
             randDir = Random.insideUnitCircle;
             moveSpeed = Random.Range(2f, 10f);
         }
         
-        if (transform.position.y > 8f || transform.position.y < -8f)
+        if (transform.position.y > 7f || transform.position.y < -7f)
         {
             randDir = Random.insideUnitCircle;
             moveSpeed = Random.Range(2f, 10f);
         }
 
-        if (transform.position.x > 10f || transform.position.x < -10f || transform.position.y > 9f ||
-            transform.position.y < -9f)
+        if (transform.position.x > 9f || transform.position.x < -8f || transform.position.y > 8f ||
+            transform.position.y < -8f)
         {
             transform.position = Vector2.zero;
         }

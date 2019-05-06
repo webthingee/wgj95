@@ -1,14 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CustomerManager : MonoBehaviour
-{
-    public string customerName;
-    public Sprite customerSprite;
-    
+{    
     public float countdownInitValue = 1f;
     private float countdownCounter = 1f;
 
@@ -44,13 +39,18 @@ public class CustomerManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        Init();
+        NewCustomer();
+        NewCountdownTimer();
     }
 
-    public void Init()
+    private void Update()
+    {
+        CountdownCounter -= Time.deltaTime * 0.01f;
+    }
+    
+    public void NewCustomer()
     {
         int cIndx = Random.Range(0, customers.Length);
         
@@ -59,11 +59,10 @@ public class CustomerManager : MonoBehaviour
         
         countdownCounter = countdownInitValue;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        CountdownCounter -= Time.deltaTime * 0.01f;
+    
+    public void NewCountdownTimer()
+    {        
+        countdownCounter = countdownInitValue;
     }
 
     public float CalculateScore()
@@ -83,11 +82,4 @@ public class CustomerManager : MonoBehaviour
     {
         permScore += score;
     }
-}
-
-[System.Serializable]
-public class Customer
-{
-    public string customerName;
-    public Sprite customerSprite;
 }

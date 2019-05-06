@@ -11,6 +11,7 @@ public class FlavorMeter : MonoBehaviour
     public Slider flavorSlider;
     public int flavorValue;
     public Color flavorBkColor = Color.black;
+    public Color flavorGoalColor = Color.green;
 
     public int FlavorValue
     {
@@ -31,33 +32,27 @@ public class FlavorMeter : MonoBehaviour
         flavorSlider = GetComponentInChildren<Slider>();
     }
 
-    void Start()
-    {
-        SetGoal(Random.Range(1,20) * 5);
-    }
-
     public void SetGoal(int newGoal)
     {
         goal = newGoal;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         ResetColors();
-        goalMeter.transform.GetChild(goal / 10).GetComponent<Image>().color = Color.green;
+        goalMeter.transform.GetChild(goal / 10).GetComponent<Image>().color = flavorGoalColor;
 
-        if (Random.value > .99f)
+        if (Random.value > .995f)
         {
             FlavorValue--;
         }
         
-        pointsEarned = 100 - (Mathf.Abs(goal - flavorValue));
+        pointsEarned = 100 - Mathf.Abs(goal - flavorValue);
     }
 
     public bool IsInGoal()
     {
-        return Mathf.Abs(goal - flavorValue) <= 9f;
+        return Mathf.Abs(goal - flavorValue) <= 5f;
     }
 
     public void ResetColors()
