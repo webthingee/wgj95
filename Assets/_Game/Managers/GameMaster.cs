@@ -83,7 +83,7 @@ public class GameMaster : MonoBehaviour
     {
         foreach (FlavorMeter flavorMeter in FindObjectsOfType<FlavorMeter>())
         {
-            if (flavorMeter.IsInGoal()) continue;
+            if (flavorMeter.IsInGoal()) continue; // if non fail, we exit on the last check.
             
             Debug.Log("Nope");
 
@@ -97,8 +97,10 @@ public class GameMaster : MonoBehaviour
             if (fails >= failsMax)
             {
                 LoseCondition();
+                return;
             }
-
+            
+            NextOrder();
             return;
         }
 

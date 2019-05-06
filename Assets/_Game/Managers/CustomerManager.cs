@@ -19,6 +19,8 @@ public class CustomerManager : MonoBehaviour
 
     public Customer[] customers;
 
+    private bool countdownTimerExpired;
+
     public float CountdownCounter
     {
         get { return countdownCounter; }
@@ -32,9 +34,11 @@ public class CustomerManager : MonoBehaviour
             cCountdown.ImageValue = countdownCounter;
             scoreDisplay.FloatValue = permScore + CalculateScore();
 
-            if (countdownCounter == 0)
+            if (countdownCounter == 0 && !countdownTimerExpired)
             {
-                GameMaster.instance.LoseCondition();
+                countdownTimerExpired = true;
+                Debug.Log("c");
+                GameMaster.instance.CheckValues();
             }
         }
     }
@@ -47,7 +51,7 @@ public class CustomerManager : MonoBehaviour
 
     private void Update()
     {
-        CountdownCounter -= Time.deltaTime * 0.01f;
+        CountdownCounter -= Time.deltaTime * 0.1f;
     }
     
     public void NewCustomer()
@@ -55,14 +59,13 @@ public class CustomerManager : MonoBehaviour
         int cIndx = Random.Range(0, customers.Length);
         
         cName.text = customers[cIndx].customerName;
-        cSprite.sprite = customers[cIndx].customerSprite;
-        
-        countdownCounter = countdownInitValue;
+        cSprite.sprite = customers[cIndx].customerSprite;        
     }
     
     public void NewCountdownTimer()
-    {        
-        countdownCounter = countdownInitValue;
+    {
+        CountdownCounter = countdownInitValue;
+        countdownTimerExpired = false;
     }
 
     public float CalculateScore()
