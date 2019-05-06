@@ -33,7 +33,16 @@ public class GameMaster : MonoBehaviour
     
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Debug.Log("not the instance " + name);
+            Destroy(gameObject);
+        }
 
         Time.timeScale = 1f;
         
