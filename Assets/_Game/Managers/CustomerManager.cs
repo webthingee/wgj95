@@ -51,7 +51,7 @@ public class CustomerManager : MonoBehaviour
 
     private void Update()
     {
-        CountdownCounter -= Time.deltaTime * 0.1f;
+        CountdownCounter -= Time.deltaTime * 0.01f;
     }
     
     public void NewCustomer()

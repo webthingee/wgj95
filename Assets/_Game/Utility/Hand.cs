@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Hand : MonoBehaviour
@@ -44,7 +43,6 @@ public class Hand : MonoBehaviour
         }
     }
 
-    [CanBeNull]
     private GameObject GetGameObj(Vector3 start)
     {
         // Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, enemyAttackRange, 1 << LayerMask.NameToLayer("Player"));
