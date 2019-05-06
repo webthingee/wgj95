@@ -651,7 +651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 178427968}
   m_Layer: 0
-  m_Name: '[[ SCEENS ]]'
+  m_Name: '[[ SCREENS ]]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
