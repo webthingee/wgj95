@@ -6,6 +6,8 @@ public class GameMaster : MonoBehaviour
     public static GameMaster instance;
 
     public bool testMode;
+
+    public int shakeIncreaseValue = 2;
     
     public FlavorMeter salt;
     public Color saltColor;
@@ -71,24 +73,25 @@ public class GameMaster : MonoBehaviour
     {
         if (ingNum == 1)
         {
-            salt.FlavorValue++;
+            salt.FlavorValue += shakeIncreaseValue;
         }
         if (ingNum == 2)
         {
-            saffron.FlavorValue++;
+            saffron.FlavorValue += shakeIncreaseValue;
         }
         if (ingNum == 3)
         {
-            pepper.FlavorValue++;
+            pepper.FlavorValue += shakeIncreaseValue;
         }
         if (ingNum == 4)
         {
-            mint.FlavorValue++;
+            mint.FlavorValue += shakeIncreaseValue;
         }
     }
 
-    public void CheckValues()
+    public void CheckValues(bool isTimeExpired = false)
     {
+        Debug.Log("check");
         foreach (FlavorMeter flavorMeter in FindObjectsOfType<FlavorMeter>())
         {
             if (flavorMeter.IsInGoal()) continue; // if non fail, we exit on the last check.
@@ -108,7 +111,7 @@ public class GameMaster : MonoBehaviour
                 return;
             }
             
-            NextOrder();
+            if (isTimeExpired) NextOrder();
             return;
         }
 
@@ -135,7 +138,7 @@ public class GameMaster : MonoBehaviour
     {
         foreach (FlavorMeter flavorMeter in FindObjectsOfType<FlavorMeter>())
         {
-            flavorMeter.SetGoal(Random.Range(3,20) * 5 - 5);
+            flavorMeter.SetGoal(Random.Range(25,95));
             flavorMeter.FlavorValue = 0;
             
             if (testMode)

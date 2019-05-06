@@ -9,6 +9,7 @@ public class FlavorMeter : MonoBehaviour
     
     [SerializeField] private int flavorID;
     public Slider flavorSlider;
+    public Slider flavorGoalSlider;
     public int flavorValue;
     public Color flavorBkColor = Color.black;
     public Color flavorGoalColor = Color.green;
@@ -27,21 +28,16 @@ public class FlavorMeter : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        flavorSlider = GetComponentInChildren<Slider>();
-    }
-
     public void SetGoal(int newGoal)
     {
         goal = newGoal;
+        flavorGoalSlider.value = goal;
     }
 
     private void Update()
     {
-        ResetColors();
-        goalMeter.transform.GetChild(goal / 10).GetComponent<Image>().color = flavorGoalColor;
-
+        if (Time.timeScale < 0.5f) return;
+        
         if (Random.value > .995f)
         {
             FlavorValue--;
@@ -52,14 +48,6 @@ public class FlavorMeter : MonoBehaviour
 
     public bool IsInGoal()
     {
-        return Mathf.Abs(goal - flavorValue) <= 5f;
-    }
-
-    public void ResetColors()
-    {
-        foreach (Image img in goalMeter.GetComponentsInChildren<Image>())
-        {
-            img.color = flavorBkColor;
-        }
+        return Mathf.Abs(goal - flavorValue) < 10f;
     }
 }

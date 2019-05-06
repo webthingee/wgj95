@@ -38,7 +38,7 @@ public class CustomerManager : MonoBehaviour
             {
                 countdownTimerExpired = true;
                 Debug.Log("c");
-                GameMaster.instance.CheckValues();
+                GameMaster.instance.CheckValues(true);
             }
         }
     }
