@@ -88,4 +88,4 @@ fmod_WGJ59/.cache
 fmod_WGJ59/.user
 
 # WebGL Builds
-!WebGL/*
+!WebGL/**
