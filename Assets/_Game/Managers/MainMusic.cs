@@ -5,8 +5,6 @@ public class MainMusic : MonoBehaviour
 {
     [EventRef] public string mainMusicSelection;
     private FMOD.Studio.EventInstance mainMusicEvent;
-
-    public float songSelectionValue;
     
     void Start()
     {
@@ -21,10 +19,14 @@ public class MainMusic : MonoBehaviour
         mainMusicEvent.setParameterByName(spice, value, true);
     }
 
+    public void ChangeEndGame(float value)
+    {
+        mainMusicEvent.setParameterByName("endGame", value, true);
+    }
+    
     public void ChangeSongSelection(float songNum)
     {
         mainMusicEvent.setParameterByName("songSelect", songNum, true);
-        songSelectionValue = songNum;
     }
 
     private void OnDestroy()

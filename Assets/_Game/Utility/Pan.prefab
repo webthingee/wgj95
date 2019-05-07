@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7876909851952258794}
   - component: {fileID: 7876909851952258796}
-  - component: {fileID: 7876909851952258797}
+  - component: {fileID: 1992446827}
   m_Layer: 0
   m_Name: Pan
   m_TagString: Untagged
@@ -48,8 +48,8 @@ MonoBehaviour:
   startShake: 0
   endShake: 0
   shakeStrength: 0.7
---- !u!58 &7876909851952258797
-CircleCollider2D:
+--- !u!70 &1992446827
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -61,9 +61,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.1826334
+  m_Offset: {x: 0.00000018068565, y: 1.5157013}
+  m_Size: {x: 2.9910717, y: 1.4197546}
+  m_Direction: 1
 --- !u!1 &7876909852581825739
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 7876909852581825739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7876909851952258794}
   m_RootOrder: 0
@@ -131,8 +131,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 14fda62a5e7b547d39e61d3699fe9630, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 76c313d4adc6341d6b522ff93c84c166, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

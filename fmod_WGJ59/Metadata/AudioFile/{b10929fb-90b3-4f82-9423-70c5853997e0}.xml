@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{b10929fb-90b3-4f82-9423-70c5853997e0}">
+		<property name="assetPath">
+			<value>456382__monsterthing__boiling-pot-of-water.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>14.393469387755102</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ce1e6acd-a08d-4edf-9bd3-df296ceecd8c}</destination>
+		</relationship>
+	</object>
+</objects>

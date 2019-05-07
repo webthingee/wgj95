@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 45917714}
   - component: {fileID: 45917716}
   - component: {fileID: 45917715}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 127600776}
   - component: {fileID: 127600775}
   - component: {fileID: 127600774}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 178427968}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: '[[ SCREENS ]]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 191261293}
   - component: {fileID: 191261295}
   - component: {fileID: 191261294}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextMeshPro Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6018,7 +6018,7 @@ GameObject:
   - component: {fileID: 387212087}
   - component: {fileID: 387212086}
   - component: {fileID: 387212085}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11045,7 +11045,7 @@ GameObject:
   - component: {fileID: 466642786}
   - component: {fileID: 466642788}
   - component: {fileID: 466642787}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11273,7 +11273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491811414}
   - component: {fileID: 491811413}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Win Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11408,7 +11408,7 @@ PrefabInstance:
     - target: {fileID: 317977961429971835, guid: b97178a59d33b4c99ba8e0c2a1815fe1,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b97178a59d33b4c99ba8e0c2a1815fe1, type: 3}
@@ -16621,7 +16621,7 @@ GameObject:
   - component: {fileID: 698526458}
   - component: {fileID: 698526460}
   - component: {fileID: 698526459}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bkgrnd Full
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21903,7 +21903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852557667}
   - component: {fileID: 852557666}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Lose Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27959,7 +27959,7 @@ GameObject:
   - component: {fileID: 1100529556}
   - component: {fileID: 1100529558}
   - component: {fileID: 1100529557}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextMeshPro Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28593,7 +28593,7 @@ GameObject:
   - component: {fileID: 1174554101}
   - component: {fileID: 1174554103}
   - component: {fileID: 1174554102}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bkgrnd Full
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28742,7 +28742,7 @@ GameObject:
   - component: {fileID: 1216892198}
   - component: {fileID: 1216892200}
   - component: {fileID: 1216892199}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bkgrnd View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28968,7 +28968,7 @@ GameObject:
   - component: {fileID: 1276443085}
   - component: {fileID: 1276443087}
   - component: {fileID: 1276443086}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29514,7 +29514,7 @@ GameObject:
   - component: {fileID: 1446822263}
   - component: {fileID: 1446822265}
   - component: {fileID: 1446822264}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bkgrnd Full
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29589,7 +29589,7 @@ GameObject:
   - component: {fileID: 1471834328}
   - component: {fileID: 1471834330}
   - component: {fileID: 1471834329}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bkgrnd View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34518,7 +34518,7 @@ GameObject:
   - component: {fileID: 1549907474}
   - component: {fileID: 1549907476}
   - component: {fileID: 1549907475}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextMeshPro Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34643,11 +34643,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -34754,7 +34754,7 @@ GameObject:
   - component: {fileID: 1603272146}
   - component: {fileID: 1603272148}
   - component: {fileID: 1603272147}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bkgrnd View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39767,7 +39767,7 @@ GameObject:
   - component: {fileID: 1650496499}
   - component: {fileID: 1650496498}
   - component: {fileID: 1650496497}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40287,7 +40287,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: e0e4eaa57b5c64dc8bd0f150a6c030b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -40488,7 +40488,7 @@ GameObject:
   - component: {fileID: 1758495641}
   - component: {fileID: 1758495640}
   - component: {fileID: 1758495639}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Start Game Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40617,7 +40617,7 @@ GameObject:
   - component: {fileID: 1768916159}
   - component: {fileID: 1768916158}
   - component: {fileID: 1768916157}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40829,7 +40829,7 @@ PrefabInstance:
     - target: {fileID: 317977961429971835, guid: b97178a59d33b4c99ba8e0c2a1815fe1,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b97178a59d33b4c99ba8e0c2a1815fe1, type: 3}
@@ -45990,13 +45990,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1947832399}
   - component: {fileID: 1947832400}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: New Game Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1947832399
 Transform:
   m_ObjectHideFlags: 0
@@ -46036,28 +46036,35 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7876909852341036993}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &1992446827
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992446826}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00000018068565, y: 1.5157013}
-  m_Size: {x: 2.9910717, y: 1.4197546}
-  m_Direction: 1
 --- !u!4 &1992446829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7876909851952258794, guid: 20542a7d244eb4e9f9ac59389ae57720,
     type: 3}
   m_PrefabInstance: {fileID: 7876909852341036993}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1992446830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992446826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Boil
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &2003978530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46153,7 +46160,7 @@ PrefabInstance:
     - target: {fileID: 317977961429971835, guid: b97178a59d33b4c99ba8e0c2a1815fe1,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b97178a59d33b4c99ba8e0c2a1815fe1, type: 3}
@@ -46393,7 +46400,7 @@ GameObject:
   - component: {fileID: 2137845801}
   - component: {fileID: 2137845800}
   - component: {fileID: 2137845799}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46645,7 +46652,7 @@ PrefabInstance:
     - target: {fileID: 317977961429971835, guid: b97178a59d33b4c99ba8e0c2a1815fe1,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b97178a59d33b4c99ba8e0c2a1815fe1, type: 3}
@@ -47432,37 +47439,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7876909851952258797, guid: 20542a7d244eb4e9f9ac59389ae57720,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 1.3991108
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876909851952258797, guid: 20542a7d244eb4e9f9ac59389ae57720,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.64361286
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876909852581825738, guid: 20542a7d244eb4e9f9ac59389ae57720,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876909852581825738, guid: 20542a7d244eb4e9f9ac59389ae57720,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7876909852581825741, guid: 20542a7d244eb4e9f9ac59389ae57720,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 7876909852581825741, guid: 20542a7d244eb4e9f9ac59389ae57720,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 76c313d4adc6341d6b522ff93c84c166,
-        type: 3}
-    m_RemovedComponents:
-    - {fileID: 7876909851952258797, guid: 20542a7d244eb4e9f9ac59389ae57720, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20542a7d244eb4e9f9ac59389ae57720, type: 3}

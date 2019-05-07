@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections;
+using FMODUnity;
+using FMOD.Studio;
 using UnityEngine;
 
 public class ShakeAction : MonoBehaviour
@@ -9,12 +10,16 @@ public class ShakeAction : MonoBehaviour
 
     public float shakeStrength;
     private float shakeStrengthTime;
+    
+    private EventInstance shakeSoundEvent;
 
     public static event Action<int> OnShake;
 
     private void Start()
     {
         shakeStrengthTime = Time.time + shakeStrength * 100 * Time.deltaTime;
+        shakeSoundEvent = RuntimeManager.CreateInstance("event:/SFX/BasicShake");
+        shakeSoundEvent.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
     }
 
     private void Update()
@@ -36,11 +41,24 @@ public class ShakeAction : MonoBehaviour
     {
         startShake = false;
         endShake = true;
+        
+        // Play a sound when during changes
+        PLAYBACK_STATE playbackState;
+        shakeSoundEvent.getPlaybackState(out playbackState);
+        if (playbackState != PLAYBACK_STATE.PLAYING)
+        {
+            shakeSoundEvent.start();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         startShake = true;
         endShake = false;    
+    }
+
+    private void OnDestroy()
+    {
+        shakeSoundEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

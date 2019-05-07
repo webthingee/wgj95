@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{f6ed0fe8-1e71-43c4-9d2e-df4fe80a877f}">
+		<property name="assetPath">
+			<value>sfx_sound_depressurizing - Trimmed.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ce1e6acd-a08d-4edf-9bd3-df296ceecd8c}</destination>
+		</relationship>
+	</object>
+</objects>

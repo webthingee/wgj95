@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FMODUnity;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
@@ -107,6 +108,7 @@ public class GameMaster : MonoBehaviour
             if (flavorMeter.IsInGoal()) continue; // if non fail, we exit on the last check.
             
             Debug.Log("Nope");
+            RuntimeManager.PlayOneShot("event:/SFX/Nope", Vector3.zero);
 
             fails++;
 
@@ -126,6 +128,7 @@ public class GameMaster : MonoBehaviour
         }
 
         Debug.Log("Yep");
+        RuntimeManager.PlayOneShot("event:/SFX/Yep", Vector3.zero);
         GetComponent<CustomerManager>().CreatePermScore();
         
         success++;
@@ -165,6 +168,8 @@ public class GameMaster : MonoBehaviour
     public void WinCondition()
     {
         Debug.Log("Win!", gameObject);
+        FindObjectOfType<MainMusic>().ChangeSongSelection(0.22f);
+        FindObjectOfType<MainMusic>().ChangeEndGame(0.33f);
         winCanvas.SetActive(true);
         Time.timeScale = 0.000000001f; 
     }
@@ -172,6 +177,8 @@ public class GameMaster : MonoBehaviour
     public void LoseCondition()
     {
         Debug.Log("Game Over", gameObject);
+        FindObjectOfType<MainMusic>().ChangeSongSelection(0.22f);
+        FindObjectOfType<MainMusic>().ChangeEndGame(0.66f);
         loseCanvas.SetActive(true);
         Time.timeScale = 0.000000001f;
     }

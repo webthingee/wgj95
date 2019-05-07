@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{be11a036-7f8d-4756-a2d3-e2dd47bdcc25}">
+		<property name="assetPath">
+			<value>368607__samsterbirdies__shake.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.34414965986394558</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ce1e6acd-a08d-4edf-9bd3-df296ceecd8c}</destination>
+		</relationship>
+	</object>
+</objects>

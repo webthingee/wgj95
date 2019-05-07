@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{d6824fa7-aea4-411b-995e-5c60342951f8}">
+		<property name="name">
+			<value>shakePitch</value>
+		</property>
+		<relationship name="folder">
+			<destination>{899180db-4c91-4f07-8ce2-12450c06adbd}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0562930c-a9cd-46d3-b399-b96295737a46}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0562930c-a9cd-46d3-b399-b96295737a46}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
