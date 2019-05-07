@@ -86,3 +86,6 @@ fmod_editor.log
 !fmod_WGJ59/*
 fmod_WGJ59/.cache
 fmod_WGJ59/.user
+
+# WebGL Builds
+!WebGL/*

@@ -8,6 +8,8 @@ public class Hand : MonoBehaviour
     public int held;
     public GameObject objInHand;
     
+    public Texture2D cursorTexture;
+
     private void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -15,7 +17,13 @@ public class Hand : MonoBehaviour
 
         transform.position = mousePos;
 
-        if (EventSystem.current.IsPointerOverGameObject()) return;
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            return;
+        }
+        
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
         
         if (Input.GetMouseButtonDown(0))
         {
