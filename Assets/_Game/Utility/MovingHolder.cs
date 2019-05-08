@@ -1,16 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MovingHolder : MonoBehaviour
 {
     public Vector2 randDir;
-    public float moveSpeed = 1;
+    public float moveSpeedMin = 2f;
+    public float moveSpeedMax = 7f;
+
+    private float moveSpeed;
     
     void Start()
     {
         randDir = Random.insideUnitCircle;
-        moveSpeed = Random.Range(2f, 10f);
+        moveSpeed = Random.Range(moveSpeedMin, moveSpeedMax);
     }
 
     void Update()
