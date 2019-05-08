@@ -19,11 +19,12 @@ public class Hand : MonoBehaviour
 
         if (EventSystem.current.IsPointerOverGameObject())
         {
+            Cursor.visible = true;
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             return;
         }
-        
-        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+
+        Cursor.visible = false;
         
         if (Input.GetMouseButtonDown(0))
         {
