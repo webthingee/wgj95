@@ -7,8 +7,8 @@ public class Hand : MonoBehaviour
 
     public int held;
     public GameObject objInHand;
-    
     public Texture2D cursorTexture;
+    public Texture2D cursor2Texture;
 
     private void Update()
     {
@@ -19,12 +19,12 @@ public class Hand : MonoBehaviour
 
         if (EventSystem.current.IsPointerOverGameObject())
         {
-            Cursor.visible = true;
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
             return;
         }
 
-        Cursor.visible = false;
+        Vector2 cursorHotspot = new Vector2 (cursorTexture.width / 2, cursorTexture.height / 2);
+        Cursor.SetCursor(cursor2Texture, cursorHotspot, CursorMode.Auto);
         
         if (Input.GetMouseButtonDown(0))
         {
